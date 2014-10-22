@@ -1,0 +1,36 @@
+
+<head>
+ <title>Here</title>
+</head>
+<body>
+ <h1>Here</h1>
+ {{> eventslistview }}
+ {{> addAttendeeNameForm}}
+ <br />
+ {{> attendeeslistview}}
+</body>
+
+<template name="eventslistview">
+	<ul>
+	{{# each event}}
+		<li class="{{selectedEvent}}">{{name}}: {{description}} </li>
+	{{/each}}
+</ul>
+</template>
+
+<template name="addAttendeeNameForm">
+	<form>
+    <input type="text" id="attendeeName">
+    <input type="submit" value="I'm Here!">
+	</form>
+</template>
+
+
+<template name="attendeeslistview">
+	<ul>
+	{{# each attendee}}
+		<li>{{name}} </li>
+	{{/each}}
+</ul>
+</template>
+
